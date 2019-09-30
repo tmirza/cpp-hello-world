@@ -1,2 +1,2 @@
 all:
-	g++ -g hello.cc
+	g++ -g hello.cpp -o hello.out
