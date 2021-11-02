@@ -14,7 +14,7 @@ commands:
     exec:
       label: "Build application"
       component: cpp-dev
-      workingDir: ${CHE_PROJECTS_ROOT}/cpp-hello-world
+      workingDir: ${PROJECTS_ROOT}/cpp-hello-world
       commandLine: g++ -g hello.cpp -o hello.out && echo "Build complete"
       group:
         kind: build
@@ -23,7 +23,7 @@ commands:
     exec:
       label: "Run application"
       component: cpp-dev
-      workingDir: ${CHE_PROJECTS_ROOT}/cpp-hello-world
+      workingDir: ${PROJECTS_ROOT}/cpp-hello-world
       commandLine: "./hello.out"
       group:
         kind: run
