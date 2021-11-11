@@ -6,7 +6,7 @@ attributes:
 components:
   - name: cpp-dev
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-b452131
+      image: vsvydenko/universal:cpp
       memoryLimit: 1G
       mountSources: true
 commands:
