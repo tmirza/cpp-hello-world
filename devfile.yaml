@@ -2,17 +2,17 @@ schemaVersion: 2.1.0
 metadata:
   name: cpp
 components:
-  - name: cpp-dev
+  - name: tools
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-1e8c2c9
+      image: quay.io/devfile/universal-developer-image:ubi8-0e189d9
       memoryLimit: 1G
       mountSources: true
 commands:
   - id: build
     exec:
       label: "Build application"
-      component: cpp-dev
-      workingDir: ${PROJECTS_ROOT}/cpp-hello-world
+      component: tools
+      workingDir: "${PROJECT_SOURCE}"
       commandLine: g++ -g hello.cpp -o hello.out && echo "Build complete"
       group:
         kind: build
@@ -20,8 +20,8 @@ commands:
   - id: run
     exec:
       label: "Run application"
-      component: cpp-dev
-      workingDir: ${PROJECTS_ROOT}/cpp-hello-world
+      component: tools
+      workingDir: "${PROJECT_SOURCE}"
       commandLine: "./hello.out"
       group:
         kind: run
